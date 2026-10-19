@@ -1,0 +1,42 @@
+name: Build PHP hosting ZIP
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP and Composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer:v2
+
+      - name: Install production PHP dependencies
+        run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+
+      - name: Create hosting ZIP
+        run: |
+          zip -qr Radio_Broadcaster-PHP-hosting.zip . \
+            -x './.git/*' \
+               './.github/*' \
+               './node_modules/*' \
+               './Radio_Broadcaster-PHP-hosting.zip'
+
+      - name: Upload hosting ZIP
+        uses: actions/upload-artifact@v4
+        with:
+          name: Radio_Broadcaster-PHP-hosting
+          path: Radio_Broadcaster-PHP-hosting.zip
+          if-no-files-found: error
+          retention-days: 14
