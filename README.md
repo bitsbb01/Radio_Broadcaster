@@ -38,7 +38,7 @@ The upstream PawTunes project provides the web player, station management panel,
 
 ## Quick Start
 
-This application needs a PHP web host; GitHub stores the source code but does not run the PHP application or relay audio. See [RADIO_SETUP.md](RADIO_SETUP.md) for station configuration, Kids/Adult channel visibility, HTTPS requirements, and embedding guidance.
+This application needs a PHP web host; GitHub stores the source code but does not run the PHP application or relay audio. See [RADIO_SETUP.md](RADIO_SETUP.md) for station configuration and [APP_INTEGRATION.md](APP_INTEGRATION.md) for the app-friendly player URL, Android WebView, and website iframe setup.
 
 ### Add online radio stations
 
