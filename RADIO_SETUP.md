@@ -5,9 +5,10 @@ This is a self-hosted PHP radio player based on PawTunes. GitHub stores its sour
 ## Add station streams
 
 1. Deploy the project to a PHP 7.4+ web host with the required extensions listed in `README.md`.
-2. Open `/panel/` and change the initial administrator password before making the panel public.
-3. Open **Channels → Add Channel**. Enter the station name, select an audience, and paste the station's direct stream or mountpoint URL under **Streams (Audio)**. Use MP3 where available and HTTPS where the station provides it.
-4. Save, then test from the target website and an Android device. Some streams block embedding or only support HTTP; those may not play inside an HTTPS site or Android WebView.
+2. Copy `inc/config/general.example.php` to `inc/config/general.php` so the app has its initial configuration.
+3. Open `/panel/` and change the initial administrator password before making the panel public.
+4. Open **Channels → Add Channel**. Enter the station name, select an audience, and paste the station's direct stream or mountpoint URL under **Streams (Audio)**. Use MP3 where available and HTTPS where the station provides it.
+5. Save, then test from the target website and an Android device. Some streams block embedding or only support HTTP; those may not play inside an HTTPS site or Android WebView.
 
 A station page URL is not necessarily a stream URL. Use the direct link supplied by the station or its SHOUTcast player. The directory can list stations, but it does not guarantee each URL stays online or works in every browser.
 
