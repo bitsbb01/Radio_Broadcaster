@@ -16,6 +16,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Check out recommended station catalog
+        uses: actions/checkout@v4
+        with:
+          repository: deroverda/recommended-radio-streams
+          ref: main
+          path: station-catalog
+
       - name: Set up PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
@@ -27,12 +34,16 @@ jobs:
           composer config platform.php 8.1.0
           composer update --with-all-dependencies --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
+      - name: Generate initial recommended station catalogue
+        run: php scripts/generate-default-channels.php station-catalog/playlists inc/config/channels.php
+
       - name: Create hosting ZIP
         run: |
           zip -qr Radio_Broadcaster-PHP-hosting.zip . \
             -x './.git/*' \
                './.github/*' \
                './node_modules/*' \
+               './station-catalog/*' \
                './Radio_Broadcaster-PHP-hosting.zip'
 
       - name: Upload hosting ZIP
