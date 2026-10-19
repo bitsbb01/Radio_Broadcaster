@@ -22,8 +22,10 @@ jobs:
           php-version: '8.2'
           tools: composer:v2
 
-      - name: Install production PHP dependencies
-        run: composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
+      - name: Resolve PHP dependencies for shared hosting
+        run: |
+          composer config platform.php 7.4.0
+          composer update --with-all-dependencies --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
       - name: Create hosting ZIP
         run: |
