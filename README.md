@@ -42,7 +42,7 @@ This application needs a PHP web host; GitHub stores the source code but does no
 
 ### Add online radio stations
 
-After installing, sign in to `/panel/`, change the initial administrator password, and add each station under **Channels**. Paste a direct stream URL such as a Shoutcast mountpoint; a station's normal website URL is not a stream URL. Choose the channel audience:
+For a fresh checkout, copy `inc/config/general.example.php` to `inc/config/general.php` first. Then sign in to `/panel/`, change the initial administrator password, and add each station under **Channels**. Paste a direct stream URL such as a Shoutcast mountpoint; a station's normal website URL is not a stream URL. Choose the channel audience:
 
 - **Kids**: shown when the player is opened with `?audience=kids`.
 - **All ages**: shown in the Kids and Adult player views.
