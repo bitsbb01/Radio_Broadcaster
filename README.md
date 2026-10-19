@@ -71,9 +71,9 @@ docker run -d -p 80:80 jackyprahec/pawtunes:latest
 Then visit `http://localhost/panel/` - login with `admin` / `password`.
 
 ### Manual Upload
-Upload the release ZIP to your web server, then visit:
+Upload the release ZIP to your web server, (i would recommend placing into a sub folder called radio) then visit:
 ```
-http://your-host.com/pawtunes/panel/
+http://your-host.com/radio/panel/index.php
 ```
 Login: `admin` / `password`
 
