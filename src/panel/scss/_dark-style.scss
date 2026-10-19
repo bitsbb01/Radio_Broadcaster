@@ -1,0 +1,390 @@
+.dark-mode {
+    --secondary-color: #e2e8f0 !important;
+
+    body {
+        color: #e2e8f0;
+        background: $slate-900;
+    }
+
+    &.login-page {
+
+        body {
+            background-image: linear-gradient($slate-900 0, $slate-800 100%);
+        }
+
+        .login-container {
+            background: $slate-800;
+            border-color: #334155;
+        }
+
+        .form-control {
+            border-color: #475569;
+            background: $slate-800;
+
+            &:autofill {
+                color: #94a3b8;
+                background: transparent !important;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus,
+            &:-webkit-autofill:active {
+                -webkit-box-shadow: 0 0 0 40px $slate-800 inset !important;
+                -webkit-text-fill-color: #94a3b8;
+            }
+
+            &:hover {
+                transition: none;
+                border: 1px solid #475569;
+            }
+
+            &:focus {
+                color: #e2e8f0;
+                border-color: $primary-bg-color;
+                outline: 0;
+            }
+
+            &::placeholder {
+                font-style: normal;
+                opacity: 1;
+                color: #64748b !important;
+            }
+
+            &:hover::placeholder,
+            &:focus::placeholder {
+                color: #94a3b8 !important;
+            }
+        }
+    }
+
+    a:not(.btn) {
+        color: #94a3b8;
+
+        &:hover {
+            color: $primary-bg-color;
+        }
+    }
+
+    .script-version {
+        .clickable {
+            .fa-rotate-180::before {
+                margin-top: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .btn-close {
+        filter: invert(1) grayscale(100%) brightness(200%);
+    }
+
+    .croparea {
+        color: #94a3b8;
+        border-color: #334155;
+        background: $slate-800;
+    }
+
+    .progress-bar {
+        background-color: #475569;
+
+        .bar {
+            p {
+                color: #e2e8f0;
+            }
+        }
+    }
+
+    .menu {
+        color: #94a3b8;
+        background: $slate-800;
+        box-shadow: none;
+        border-bottom-color: #334155;
+
+        ul.tabs li:first-child a {
+            border-radius: 0;
+        }
+
+        ul.tabs li:hover a {
+            color: #e2e8f0;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ul.tabs li.active a {
+            color: #e2e8f0;
+            background: transparent;
+        }
+    }
+
+    .panel {
+        background: $slate-800;
+        border-color: #334155;
+        box-shadow: none;
+
+        > .heading {
+            color: #e2e8f0;
+            border-bottom-color: #334155;
+        }
+    }
+
+    label {
+        color: #cbd5e1;
+    }
+
+    input {
+        color: #e2e8f0;
+    }
+
+    .form-control {
+        color: #e2e8f0;
+        border: 1px solid #475569;
+        background-color: $slate-800;
+
+        &:hover {
+            border-color: color.adjust(#475569, $lightness: 5%);
+        }
+
+        &:focus {
+            color: #e2e8f0;
+            border-color: $primary-bg-color;
+        }
+
+        &:autofill {
+            color: #94a3b8;
+            background: transparent !important;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 40px $slate-800 inset !important;
+            -webkit-text-fill-color: #e2e8f0;
+        }
+
+        &::placeholder {
+            font-style: normal;
+            opacity: 1;
+            color: #64748b !important;
+        }
+
+        &:hover::placeholder,
+        &:focus::placeholder {
+            color: #94a3b8 !important;
+        }
+    }
+
+    .btn-info, .btn-default {
+        background-color: #334155;
+        border-color: #475569;
+        color: #e2e8f0;
+        &:hover {
+            background-color: #475569;
+        }
+    }
+
+    .checkbox span.icon, .radio span.icon {
+        border: 1px solid #475569;
+        background: #334155;
+
+        &:hover {
+            border-color: color.adjust(#475569, $lightness: 5%);
+        }
+    }
+
+    .select-box {
+        font-size: $base-font-size;
+        position: relative;
+        display: block;
+
+        .current-value {
+            color: #e2e8f0 !important;
+            border: 1px solid #475569;
+            background: $slate-800;
+        }
+
+        &:hover:not(.opened) {
+            .current-value {
+                border-color: color.adjust(#475569, $lightness: 5%);
+            }
+        }
+
+        .search_string {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.75);
+        }
+
+        ul.options {
+            border-color: #475569;
+            background-color: $slate-800;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+            li {
+                a {
+                    color: #cbd5e1;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $primary-bg-color;
+                    }
+
+                    &.selected {
+                        //color: #55606c;
+                        //background: rgba(202, 206, 209, .5);
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    table.table {
+        color: #e2e8f0;
+        background-color: transparent;
+    }
+
+    table.table.hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.04);
+    }
+
+    table.table thead th,
+    table.table tbody td,
+    table.table tr td {
+        border-color: rgba(255, 255, 255, 0.06);
+    }
+
+    table.table thead tr th, table.table thead tr th a {
+        color: #94a3b8;
+        border-bottom-color: rgba(255, 255, 255, 0.08);
+    }
+
+    // Row action buttons in dark mode
+    table.table td.row-btns > .btn:not(.btn-danger) {
+        color: #94a3b8;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.06);
+            color: #e2e8f0;
+        }
+    }
+
+    table.table td.row-btns > .btn.btn-danger {
+        background: transparent;
+        color: $danger-color;
+
+        &:hover {
+            background: rgba($danger-color, 0.15);
+        }
+    }
+
+    .divider {
+        border-top: 1px solid #334155;
+        border-bottom: none;
+    }
+
+    .changelog {
+
+        .changelog-heading {
+            background: #334155;
+            border-bottom-color: #475569;
+            box-shadow: none;
+
+            &:hover {
+                background: #3b4f6b;
+            }
+        }
+
+        pre {
+            color: #cbd5e1;
+            font-family: $font-family !important;
+        }
+
+        h3 {
+            color: #e2e8f0;
+        }
+
+        h4 {
+            color: #e2e8f0
+        }
+
+        code {
+            color: #e2e8f0;
+            background-color: $primary-bg-color;
+            box-shadow: .07rem .07rem 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .modal-content {
+        background-color: $slate-800;
+    }
+
+    .close {
+        color: #fff;
+    }
+
+    .alert.alert-success {
+        color: #86efac;
+        background-color: rgba(22, 163, 74, 0.15);
+    }
+
+    .alert.alert-info {
+        color: #93c5fd;
+        background-color: rgba(59, 130, 246, 0.15);
+
+        a {
+            color: #93c5fd;
+        }
+    }
+
+    .alert.alert-danger, .alert.alert-error {
+        color: #fca5a5;
+        background-color: rgba(220, 38, 38, 0.15);
+    }
+
+    .alert.alert-warning {
+        color: #fcd34d;
+        background-color: rgba(245, 158, 11, 0.15);
+
+        a {
+            color: #fcd34d;
+        }
+    }
+
+    .empty-state {
+        > .icon { color: #475569; }
+        h3 { color: #e2e8f0; }
+        p { color: #94a3b8; }
+    }
+
+    .toast {
+        background: #334155;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .collapsible-header:hover {
+        color: #e2e8f0;
+    }
+
+    .js-tooltip {
+        background: #e2e8f0;
+        color: $slate-900;
+    }
+
+    .js-tooltip[data-pos="top"] .js-tooltip-arrow { border-top-color: #e2e8f0; }
+    .js-tooltip[data-pos="bottom"] .js-tooltip-arrow { border-bottom-color: #e2e8f0; }
+    .js-tooltip[data-pos="left"] .js-tooltip-arrow { border-left-color: #e2e8f0; }
+    .js-tooltip[data-pos="right"] .js-tooltip-arrow { border-right-color: #e2e8f0; }
+
+    .confirm-popover {
+        background: $slate-800;
+        border-color: #475569;
+
+        span { color: #e2e8f0; }
+
+        &::after {
+            background: $slate-800;
+            border-color: #475569;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@charset "UTF-8";
+@use "sass:color";
+
+/**
+ * ----------------------------------------------------
+ * Prahec UI Framework based on Bootstrap class names
+ * ----------------------------------------------------
+ *
+ * Copyright © 2024 Prahec. All Rights Reserved.
+ * Built with love by your friend Jacky.
+ * Visit: https://www.prahec.com
+ *
+ * Description:
+ * A lightweight UI framework utilizing Bootstrap class names to simplify development.
+ */
+
+// General Settings
+$base-font-size: 14px;
+$base-line-height: 1.5 !default;
+$font-family: "Inter", "Verdana", sans-serif;
+$icon-font: "Font Awesome 6 Free";
+$font-bold: 500 !default;
+$font-light: 300 !default;
+$font-normal: 400 !default;
+
+// Base paddings
+$input-padding-base: 7px !default;
+$btn-padding-base: .4rem !default;
+
+
+$primary-color: #fff;
+$secondary-color: #64748b;
+$primary-bg-color: #3b82f6;
+$secondary-bg-color: #334155;
+
+$header-color: #fff;
+$header-bg-color: #1e293b;
+
+$footer-color: #999;
+$footer-bg-color: #1e293b;
+
+$primary-hover-color: #2563eb;
+
+// Slate palette tokens
+$slate-50: #f8fafc;
+$slate-100: #f1f5f9;
+$slate-200: #e2e8f0;
+$slate-300: #cbd5e1;
+$slate-400: #94a3b8;
+$slate-500: #64748b;
+$slate-700: #334155;
+$slate-800: #1e293b;
+$slate-900: #0f172a;
+
+// Semantic colors
+$success-color: #16a34a;
+$danger-color: #dc2626;
+$warning-color: #f59e0b;
+$info-color: #3b82f6;
+
+// Navigation Settings
+$navigation-height: 42px;
+
+// FontAwesome
+$fa-font-path: "../fonts";
+
+// Flag icons
+$flag-icons-path: "./../flags" !default;
+$flag-icons-rect-path: "/4x3" !default;
+$flag-icons-square-path: "/1x1" !default;
+$flag-icons-use-square: false;
+
+
+// Reset all browser styles to default (match all browsers)
+@import "flags/flag-icons";
+@import "FontAwesome/fontawesome.scss";
+@import "FontAwesome/solid.scss";
+@import "FontAwesome/regular.scss";
+@import "normalize";
+@import "basic-styles";
+@import "grids";
+@import "pages";
+@import "UI/all";
+@import "UI/utilities";
+@import "pawtunes-panel";
+@import "dark-style";
+
+:root {
+    --primary-color: #{$primary-color};
+    --primary-bg-color: #{$primary-bg-color};
+    --secondary-color: #{$secondary-color};
+    --secondary-bg-color: #{$secondary-bg-color};
+}
