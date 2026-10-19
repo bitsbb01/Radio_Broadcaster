@@ -24,7 +24,7 @@ jobs:
 
       - name: Resolve PHP dependencies for shared hosting
         run: |
-          composer config platform.php 7.4.0
+          composer config platform.php 8.1.0
           composer update --with-all-dependencies --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
       - name: Create hosting ZIP
